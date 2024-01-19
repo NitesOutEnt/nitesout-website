@@ -1,0 +1,195 @@
+.dark-bg{
+    z-index: 10000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.178);
+    backdrop-filter: blur(20px);
+}
+
+.dark-bg-enter{
+    animation-name: fadeIn;
+    animation-duration: 0.3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.dark-bg-leave{
+    animation-name: fadeOut;
+    animation-duration: 0.3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.popup-container{
+    pointer-events:none;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10001;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.popup-container-enter{
+    animation-name: fadeInUp;
+    animation-duration: 0.3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.popup-container-leave{
+    animation-name: fadeOutDown;
+    animation-duration: 0.3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeOutDown {
+    0%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100%{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}
+
+.popup{
+    pointer-events: all;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 40px;
+    border-radius: 20px;
+}
+
+.nitesout-card{
+    color: white;
+    background-color: #fa9cff;
+    box-shadow:
+    inset 0 0 50px rgba(255, 255, 255, 0.461),      /* inner white */
+    inset 20px 0 80px rgba(255, 0, 255, 0.662),   /* inner left magenta short */
+    inset -20px 0 80px #0ff,  /* inner right cyan short */
+    inset 20px 0 300px #f0f,  /* inner left magenta broad */
+    inset -20px 0 300px #0ff, /* inner right cyan broad */
+    0 0 50px rgba(255, 255, 255, 0.329),            /* outer white */
+    -10px 0 80px rgba(255, 0, 255, 0.386),        /* outer left magenta */
+    10px 0 80px rgba(0, 255, 255, 0.356); 
+}
+
+.popup-text{
+    text-align: center;
+    font-weight: 400;
+    font-size: 17px;
+    margin-bottom: 40px;
+    line-height: 25px;
+}
+
+.popup input{
+    font-family: 'Inter', sans-serif;
+    height: 50px;
+    padding: 0 20px;
+    border-radius: 8px 0 0 8px;
+    border: none;
+}
+
+.popup input:focus{
+    outline: none;
+}
+
+.popup button{
+    font-family: 'Inter', sans-serif;
+    height: 50px;
+    border-radius: 0 8px 8px 0;
+    border: none;
+    background-color: black;
+    padding: 0 50px;
+    color: white;
+    cursor: pointer;
+    font-weight: 400;
+    transition: 0.3s;
+}
+
+.popup button:hover{
+    background-color: rgba(255, 255, 255, 0.45);
+}
+
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+/* invite css */
+
+.gold-card {
+    background: radial-gradient(ellipse farthest-corner at right bottom, #000000 0%, #3a3939 8%, #1a1814 30%, #22201c 40%, transparent 80%),
+                radial-gradient(ellipse farthest-corner at left top, #2c2c28 0%, #272725 8%, #222221 25%, #070606 62.5%, #242322 100%);
+    box-shadow:
+    0 0 50px rgba(255, 212, 22, 0.137),            /* outer white */
+    -10px 0 80px rgba(251, 255, 31, 0.13),        /* outer left magenta */
+    10px 0 80px rgba(248, 124, 42, 0.473); 
+}
+
+.invite-thanks{
+    text-align: center;
+    font-weight: 400;
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+.invite-img{
+    width: 30vw;
+    height: auto;
+
+    animation: fadeIn 0.3s ease-in-out 0.5s 1 forwards forwards;
+}
+
+.get-tickets{
+    background-color: rgba(255, 255, 255, 0.144);
+    color: white;
+    padding: 12px 25px;
+    border-radius: 10px;
+    font-weight: 400;
+    font-size: 13px;
+    box-shadow: rgba(0, 0, 0, 0.043) 0px 4px 10px;
+    transition: 0.3s;
+    margin-bottom: 15px;
+}
+
+.get-tickets:hover{
+    transform: scale(1.08);
+}
+
+@media screen and (max-width: 900px){
+    .popup button{
+        margin: 0;
+    }
+
+    .popup input{
+        margin: 0;
+    }
+
+    .invite-img{
+        width: 70vw;
+        margin: 30px 0;
+    }
+}

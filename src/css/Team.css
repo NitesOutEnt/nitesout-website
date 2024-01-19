@@ -1,0 +1,180 @@
+.alt-bg{
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    background-image: url("../assets/alt-BG.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    pointer-events: none;
+    opacity: 0;
+}
+
+.team-page-container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 4;
+    margin-bottom: -20vh;
+}
+
+#team-page-title{
+    margin-bottom: 10px;
+}
+
+.alt-subtitle{
+    color: white;
+    max-width: 40vw;
+    font-size: 1vw;
+    text-align: center;
+    z-index: 4;
+    opacity: 0;
+    margin-bottom: 10vh;
+
+    animation-name: fadeInUp-alt-subtitle;
+    animation-duration: 0.8s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.2s;
+}
+
+@keyframes fadeInUp-alt-subtitle {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 50%;
+        transform: translateY(0);
+    }
+}
+
+.team-members{
+    display: flex;
+    z-index: 4;
+}
+
+.member-card-container{
+    background-color: rgba(255, 255, 255, 0.048);
+    border: 1px solid rgba(255, 255, 255, 0.068);
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 30px;
+    margin: 10px 13px;
+    border-radius: 10px;
+    opacity: 0;
+    animation-name: fadeInUp;
+    animation-duration: 0.7s;
+    animation-fill-mode: forwards;
+}
+
+#nimay{
+    animation-delay: 0.2s;
+}
+
+#jaden{
+    animation-delay: 0.4s;
+}
+
+.member-card-container img{
+    width: 13vw;
+    height: 13vw;
+}
+
+.member-name{
+    /* text-transform: uppercase; */
+    font-family: 'Inter', sans-serif;
+    font-size: 1.5vw;
+    margin-bottom: 0;
+    font-weight: 400;
+}
+
+.member-major{
+    opacity: 0;
+    font-size: 0.8vw;
+    margin-bottom: 8vh;
+    font-weight: 100;
+}
+
+.member-role{
+    opacity: 50%;
+    font-size: 0.8vw;
+    margin-bottom: -5px;
+    font-weight: 100;
+}
+
+
+.member-socials{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.member-socials > a{
+    margin: 0 3px;
+    opacity: 50%;
+
+    transition: 0.3s;
+}
+
+.member-socials > a:hover{
+    opacity: 100%;
+}
+
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .team-members{
+        flex-direction: column;
+    }
+
+    .member-card-container{
+        padding: 40px 30px;
+    }
+
+    .member-card-container img{
+        width: 60vw;
+        height: 60vw;
+    }
+
+    .member-name{
+        font-size: 5vw;
+        margin-top: 35px;
+    }
+
+    .member-role{
+        font-size: 3vw;
+    }
+
+    .member-major{
+        font-size: 2.5vw;
+        margin-bottom: 50px;
+    }
+
+    .member-socials > a{
+        line-height: 0;
+        padding: 10px;
+        border-radius: 10px;
+        opacity: 1;
+        background-color: rgba(255, 255, 255, 0.091);
+        border: 1px solid rgba(255, 255, 255, 0.091);
+    }
+}

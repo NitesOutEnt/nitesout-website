@@ -1,0 +1,59 @@
+/* Cookies css */
+.alert{
+    z-index: 1000000000000;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.048);
+    border: 1px solid rgba(255, 255, 255, 0.068);
+
+    max-width: 300px;
+
+    animation-name: showAlert;
+    animation-duration: 7s;
+    opacity: 0;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+
+    display: flex;
+    align-items: center;
+}
+
+#cookies{
+    animation-delay: 1s;
+}
+
+.alert-icon{
+    width: 30px;
+    height: 30px;
+    color: white;
+}
+
+.alert-text{
+    font-size: 12px;
+    color: white;
+    margin-left: 10px;
+}
+
+@keyframes showAlert {
+    0%{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    10%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+    90%{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+    100%{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+}

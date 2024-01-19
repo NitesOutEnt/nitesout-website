@@ -1,0 +1,88 @@
+.tag{
+    background-color: white;
+    color: black;
+    display: flex;   
+    align-items: center;
+    justify-content: center;
+    padding: 0 1vw;
+    font-size: 0.5vw;
+    border-radius: 100px;
+    /* opacity: 20%; */
+
+    animation: float 3s ease-in-out infinite;
+}
+
+.tag-text{
+    margin-left: 0.2vw;
+    white-space: nowrap;
+}
+
+#bar-tag-1-1{
+    position: absolute;
+    right: -4vw;
+    bottom: 3vh;
+
+    animation-delay: 0.5s;
+}
+
+#bar-tag-1-2{
+    position: absolute;
+    left: -5vw;
+    top: -7vh;
+    animation-delay: 0.8s;
+}
+
+#bar-tag-1-3{
+    position: absolute;
+    bottom: -8vh;
+    left: -5vw;
+    background: linear-gradient(70deg, rgba(236,255,104,1) 0%, rgba(68,255,187,1) 100%);
+}
+
+.nites-out-tag-crown{
+    width: 0.7vw;
+    height: auto;
+}
+
+#bar-tag-2-1{
+    position: absolute;
+    left: -6vw;
+}
+
+#bar-tag-2-2{
+    position: absolute;
+    right: -4vw;
+    top: -5vh;
+    animation-delay: 0.5s;
+}
+
+#bar-tag-3-1{
+    position: absolute;
+    left: -3vw;
+    bottom: -6vh;
+    animation-delay: 0.8s;
+}
+
+#bar-tag-3-2{
+    position: absolute;
+    left: -12vw;
+    top: -6vh;
+}
+
+@keyframes float {
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-5px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .tag{
+        display: none;
+    }
+}

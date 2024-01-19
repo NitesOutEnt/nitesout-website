@@ -1,0 +1,39 @@
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: white;
+}
+
+html{
+    overflow: hidden;
+    overflow-y: auto;
+    -ms-overflow-style: none; 
+    scrollbar-width: none;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+html::-webkit-scrollbar {
+    display: none;
+}
+
+h2, p, h3, h4, h5, h6, a, div{
+    line-height: 100%;
+    font-weight: 300;
+}
+
+h1 {
+    font-family: 'Red Hat Display', sans-serif;
+    line-height: 100%;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}

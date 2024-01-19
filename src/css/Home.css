@@ -1,0 +1,356 @@
+html{
+    background-color: black;
+    background: black;
+}
+
+.bg {
+    overflow: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    background-image: url("../assets/NitesOut\ Gradient\ BG.jpg");
+    pointer-events: none;
+}
+
+.bg-2 {   
+    overflow: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    pointer-events: none;
+}
+
+#background-2{
+    background-image: url("../assets/NitesOut\ Gradient\ BG-rainbow.jpg");
+}
+
+#background-3{
+    background-image: url("../assets/NitesOut\ Gradient\ BG-rainbow2.jpg");
+    z-index: 2;
+    animation-name: bg-animate;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes bg-animate {
+    0%{
+        opacity: 0;
+    }
+    50%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .bg, .bg-2 {
+        width: 100vw;
+        height: 100vh;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+}
+
+.landing-fade-out{
+    animation-name: fadeOutUp;
+    animation-duration: 0.8s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+.landing-fade-in{
+    animation-name: fadeInUp;
+    animation-duration: 0.8s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+@keyframes fadeOutUp {
+    0%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100%{
+        opacity: 0;
+        transform: translateY(-100px);
+    }
+}
+
+@keyframes fadeInUp {
+    0%{
+        opacity: 0;
+        transform: translateY(100px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.under-landing{
+    /* background-color: red; */
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 4;
+}
+
+.pages-container{
+    /* background-color: green; */
+    width: 1100px;
+}
+
+.fade-away{
+    animation-name: fadeAway;
+    animation-duration: 0.8s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+.fade-in{
+    animation-name: fadeIn;
+    animation-duration: 0.8s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeAway {
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}
+
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.landing{
+    display: flex;
+    width: 100vw;
+    /* background-color: red; */
+    align-items: center;
+    justify-content: center;
+    color: white;
+    z-index: 4;
+
+    position: relative;
+}
+
+.landing-content{
+    /* background-color: blue; */
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 4;
+}
+
+.landing-logo{
+    width: 3vw;
+    margin-bottom: -2rem;
+    animation-name: fadeInUp;
+    animation-duration: 0.8s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+.landing-title{
+    font-size: 4.5vw;
+    animation-name: fadeInUp;
+    animation-duration: 0.8s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+
+    /* background: -webkit-linear-gradient(30deg, #72deff, #ff71c4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; */
+}
+
+.landing-sub{
+    margin-top: -3vh;
+    font-size: 0.9vw;
+    font-weight: 00;
+    opacity: 0;
+    max-width: 40vw;
+
+    animation-name: fadeInUp-alt-subtitle;
+    animation-duration: 0.8s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.1s;
+}
+
+.landing-waitlist{
+    opacity: 0;
+    animation-name: fadeIn;
+    animation-duration: 0.8s;
+    animation-fill-mode: forwards;
+    animation-delay: 0.5s;
+    
+    color: rgb(255, 255, 255);
+    padding: 20px 45px;
+    font-size: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-top: 30px;
+
+    background: -webkit-linear-gradient(20deg, #da48ff,#4fcdff);
+
+    box-shadow:
+    0 0 50px rgba(255, 255, 255, 0.114),            /* outer white */
+    -10px 0 80px #f0f,        /* outer left magenta */
+    10px 0 80px #0ff; 
+
+    transition: 0.3s;
+}
+
+.landing-waitlist:hover{
+
+    transform: scale(1.1);
+
+    /* background: rgb(214,137,255); */
+    /* background: linear-gradient(126deg, rgba(214,137,255,1) 0%, rgba(115,241,255,1) 100%); */
+
+
+}
+
+.bar-node{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    animation-name: fadeInUp;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+    z-index: inherit;
+}
+
+#bar-node-1{
+    bottom: 20vh;
+    left: 10vw;
+    animation-delay: 0.2s;
+}
+
+#bar-node-2{
+    bottom: -7vh;
+    right: 23vw;
+}
+
+#bar-node-3{
+    right: -6vw;
+    animation-delay: 0.3s;
+}
+
+.bar-img{
+    width: 11vw;
+    height: auto;
+    /* border-radius: 100px; */
+}
+
+.ring{
+    width: 20vw;
+    height: 20vw;
+    border: 1.5px solid rgba(255, 255, 255, 0.877);
+    border-radius: 100%;
+    position: absolute;
+
+    opacity: 50%;
+
+    animation-name: ringPulse;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+
+}
+
+#ring-1-2, #ring-2-1 #ring-3-1{
+    animation-delay: 2s;
+}
+
+#ring-1-3{
+    animation-delay: 4s;
+}
+
+#ring-1-2{
+    height: 30vw;
+    width: 30vw;
+    border: 1.5px solid rgba(255, 255, 255, 0.575);
+}
+
+#ring-1-3{
+    height: 45vw;
+    width: 45vw;
+    border: 1.5px solid rgba(255, 255, 255, 0.158);
+}
+
+@keyframes ringPulse {
+    0%{
+        opacity: 50%;
+        transform: scale(1);
+    }
+    50%{
+        opacity: 100%;
+        transform: scale(1.1);
+    }
+    100%{
+        opacity: 50%;
+        transform: scale(1);
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .bg, .bg-2{
+        width: 100vw;
+        height: 100vh;
+        background-size: 100vw 100vh;
+    }
+    
+    .landing-logo{
+        margin-bottom: -3vh;
+        width: 9vw;
+    }
+    
+    .landing-title{
+        font-size: 12vw;
+    }
+
+    .landing-sub{
+        margin-top: -2vh;
+        font-size: 3vw;
+        max-width: 80vw;
+        opacity: 50%;
+    }
+
+    .bar-node{
+        display: none;
+    }
+
+    .pages-container{
+        /* background-color: green; */
+        width: 90vw;
+    }
+}

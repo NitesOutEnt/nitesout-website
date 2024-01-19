@@ -1,0 +1,83 @@
+.mockup-page{
+    padding-top: 35vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    position: relative;
+    z-index: 5;
+}
+
+.mockup-content{
+    height: 100%;
+    /* background-color: green; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 5;
+}
+
+.mockup-title{
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    line-height: 120%;
+    font-size: 1.5vw;
+    text-align: center;
+    color: white;
+}
+
+.phone{
+    width: 18vw;
+    height: auto;
+    z-index: 5;
+}
+
+.phone-rings{
+    position: absolute;
+    width: 27vw;
+    height: 27vw;
+    opacity: 30%;
+    height: auto;
+    z-index: 3;
+}
+
+#phone-rings-2{
+    width: 35vw;
+    height: 35vw;
+    opacity: 20%;
+}
+
+#phone-rings-3{
+    width: 45vw;
+    height: 45vw;
+    opacity: 10%;
+}
+
+
+@media screen and (max-width: 900px) {
+    .mockup-page{
+        /* border: 1px solid red; */
+        margin-top: -15vh;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .phone-rings{
+        transform: scale(4) translateY(-5vh);
+    }
+    
+    .mockup-title{
+        display: none;
+    }
+
+    .phone{
+        width: 80vw;
+    }
+
+    .black-phone-fade{
+        height: 60%;
+    }
+}
