@@ -141,6 +141,9 @@ const Gallery = () => {
                             <img src={require('../assets/gallery/fn5.JPG')} className='gal-item' id="gal-5-5"/> 
                             <img src={require('../assets/gallery/fn6.JPG')} className='gal-item' id="gal-6-5"/> 
                         </div>
+                        <div className='gal-row'>
+                            <img src={require('../assets/gallery/fn7.JPG')} className='gal-item' id="gal-7-5"/> 
+                        </div>
                     </>
                 )}
             <Footer/>
