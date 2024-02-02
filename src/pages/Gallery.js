@@ -29,18 +29,28 @@ const Gallery = () => {
             document.getElementById('gal-nav-spring').classList.remove('visible');
             document.getElementById('gal-nav-litesout').classList.remove('visible');
             document.getElementById('gal-nav-nashedi').classList.add('visible');
+            document.getElementById('gal-nav-frightnite').classList.remove('visible');
         }
         else if(galNum === 3){
             setActiveGal(3);
             document.getElementById('gal-nav-nashedi').classList.remove('visible');
             document.getElementById('gal-nav-litesout').classList.remove('visible');
             document.getElementById('gal-nav-spring').classList.add('visible');
+            document.getElementById('gal-nav-frightnite').classList.remove('visible');
         }
         else if(galNum === 4){
             setActiveGal(4);
             document.getElementById('gal-nav-nashedi').classList.remove('visible');
             document.getElementById('gal-nav-spring').classList.remove('visible');
             document.getElementById('gal-nav-litesout').classList.add('visible');
+            document.getElementById('gal-nav-frightnite').classList.remove('visible');
+        }
+        else if(galNum === 5){
+            setActiveGal(5);
+            document.getElementById('gal-nav-nashedi').classList.remove('visible');
+            document.getElementById('gal-nav-spring').classList.remove('visible');
+            document.getElementById('gal-nav-litesout').classList.remove('visible');
+            document.getElementById('gal-nav-frightnite').classList.add('visible');
         }
     }
 
@@ -59,6 +69,7 @@ const Gallery = () => {
                     <div onClick={()=>{handleActiveGal(2)}}className='gal-nav-btn visible' id='gal-nav-nashedi'/>
                     <div onClick={()=>{handleActiveGal(4)}}className='gal-nav-btn' id='gal-nav-litesout'/>
                     <div onClick={()=>{handleActiveGal(3)}}className='gal-nav-btn' id='gal-nav-spring'/>
+                    <div onClick={()=>{handleActiveGal(5)}}className='gal-nav-btn' id='gal-nav-frightnite'/>
                 </div>
             </div>
 
@@ -113,6 +124,22 @@ const Gallery = () => {
                         <div className='gal-row'>
                             <img src={require('../assets/gallery/ss5.jpg')} className='gal-item' id="gal-5-3"/> 
                             <img src={require('../assets/gallery/ss6.jpg')} className='gal-item' id="gal-6-3"/> 
+                        </div>
+                    </>
+                )}
+                {activeGal === 5 && (
+                    <>
+                        <div className='gal-row'>
+                            <img src={require('../assets/gallery/fn1.JPG')} className='gal-item' id="gal-1-5"/> 
+                            <img src={require('../assets/gallery/fn2.JPG')} className='gal-item' id="gal-2-5"/> 
+                        </div>
+                        <div className='gal-row'>
+                            <img src={require('../assets/gallery/fn3.JPG')} className='gal-item' id="gal-3-5"/> 
+                            <img src={require('../assets/gallery/fn4.JPG')} className='gal-item' id="gal-4-5"/> 
+                        </div>
+                        <div className='gal-row'>
+                            <img src={require('../assets/gallery/fn5.JPG')} className='gal-item' id="gal-5-5"/> 
+                            <img src={require('../assets/gallery/fn6.JPG')} className='gal-item' id="gal-6-5"/> 
                         </div>
                     </>
                 )}

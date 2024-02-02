@@ -125,7 +125,11 @@
 }
 
 #gal-nav-noto{
-    background-image: url('../assets/events/frightnitenoto.jpg');
+    background-image: url('../assets/events/frightnitenoto.png');
+}
+
+#gal-nav-frightnite{
+    background-image: url('../assets/events/FrightNitesBanner.png');
 }
 
 #gal-nav-spring{
