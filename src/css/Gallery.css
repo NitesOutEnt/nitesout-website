@@ -125,11 +125,7 @@
 }
 
 #gal-nav-noto{
-    background-image: url('../assets/events/frightnitenoto.png');
-}
-
-#gal-nav-frightnite{
-    background-image: url('../assets/events/FrightNitesBanner.png');
+    background-image: url('../assets/events/frightnitenoto.jpg');
 }
 
 #gal-nav-spring{
@@ -142,6 +138,11 @@
 
 #gal-nav-nashedi{
     background-image: url('../assets/events/NasheDi-poster.png');
+}
+
+/* added frightnite poster */
+#gal-nav-frightnite{
+    background-image: url('../assets/events/FrightNitesBanner.png');
 }
 
 /* waitlist photo lock */
