@@ -140,6 +140,11 @@
     background-image: url('../assets/events/NasheDi-poster.png');
 }
 
+/* Added Summer Nites Banner picture*/
+#gal-nav-summer{
+    background-image: url('../assets/events/SummerNitesBanner.png');
+}
+
 /* waitlist photo lock */
 
 .unlock-container{

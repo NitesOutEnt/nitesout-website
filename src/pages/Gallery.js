@@ -28,19 +28,29 @@ const Gallery = () => {
             setActiveGal(2);
             document.getElementById('gal-nav-spring').classList.remove('visible');
             document.getElementById('gal-nav-litesout').classList.remove('visible');
+		    document.getElementById('gal-nav-summer').classList.remove('visible');
             document.getElementById('gal-nav-nashedi').classList.add('visible');
         }
         else if(galNum === 3){
             setActiveGal(3);
             document.getElementById('gal-nav-nashedi').classList.remove('visible');
             document.getElementById('gal-nav-litesout').classList.remove('visible');
+		    document.getElementById('gal-nav-summer').classList.remove('visible');
             document.getElementById('gal-nav-spring').classList.add('visible');
         }
         else if(galNum === 4){
             setActiveGal(4);
             document.getElementById('gal-nav-nashedi').classList.remove('visible');
             document.getElementById('gal-nav-spring').classList.remove('visible');
+		    document.getElementById('gal-nav-summer').classList.remove('visible');
             document.getElementById('gal-nav-litesout').classList.add('visible');
+        }
+        else if(galNum === 7){
+            setActiveGal(7);
+            document.getElementById('gal-nav-nashedi').classList.remove('visible');
+            document.getElementById('gal-nav-spring').classList.remove('visible');
+            document.getElementById('gal-nav-litesout').classList.remove('visible');
+		    document.getElementById('gal-nav-summer').classList.add('visible');
         }
     }
 
@@ -59,6 +69,7 @@ const Gallery = () => {
                     <div onClick={()=>{handleActiveGal(2)}}className='gal-nav-btn visible' id='gal-nav-nashedi'/>
                     <div onClick={()=>{handleActiveGal(4)}}className='gal-nav-btn' id='gal-nav-litesout'/>
                     <div onClick={()=>{handleActiveGal(3)}}className='gal-nav-btn' id='gal-nav-spring'/>
+                    <div onClick={()=>{handleActiveGal(7)}}className='gal-nav-btn' id='gal-nav-summer'/>
                 </div>
             </div>
 
@@ -116,6 +127,25 @@ const Gallery = () => {
                         </div>
                     </>
                 )}
+                {/* SummerNites pictures */}
+                {activeGal === 7 && (
+                    <>
+                        <div className='gal-row'>
+                            <img src={require('../assets/gallery/sn1.JPG')} className='gal-item' id="gal-1-7"/> 
+                            <img src={require('../assets/gallery/sn2.JPG')} className='gal-item' id="gal-2-7"/> 
+                        </div>
+                        <div className='gal-row'>
+                            <img src={require('../assets/gallery/sn3.JPG')} className='gal-item' id="gal-3-7"/> 
+                            <img src={require('../assets/gallery/sn4.JPG')} className='gal-item' id="gal-4-7"/> 
+                        </div>
+                        <div className='gal-row'>
+                            <img src={require('../assets/gallery/sn5.JPG')} className='gal-item' id="gal-5-7"/> 
+                            <img src={require('../assets/gallery/sn6.JPG')} className='gal-item' id="gal-6-7"/> 
+                        </div>
+                    </>
+                )}
+                
+                
             <Footer/>
             </div>
 
